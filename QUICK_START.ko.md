@@ -14,6 +14,8 @@
 
 ## 2. ZIP 풀고 실행
 
+이번 프리뷰의 `ORDO.exe`에는 Windows Authenticode 코드 서명이 없습니다.
+
 1. [Windows x64 ZIP](https://github.com/nttgutt1234-dev/ordo-releases/releases/download/r111-preview/ORDO-Windows-20261110-r111.zip)을 내려받습니다. ZIP을 저장한 폴더에서 PowerShell을 열고, SHA-256을 확인해 [릴리스 노트](https://github.com/nttgutt1234-dev/ordo-releases/blob/main/RELEASE_NOTES.md)의 값과 비교합니다.
 
    ```powershell
@@ -63,7 +65,8 @@ ORDO에서 **연결 설정**을 열어 Codex CLI를 선택합니다. **새 작�
 normalizeWhitespace(text)는 문자열 양끝의 공백 문자를 제거하고 내부의 연속 공백 문자(예: 공백, 탭, 줄바꿈)를 한 칸으로 바꿉니다. 나머지 문자는 그대로 유지합니다.
 
 결과물은 normalize-whitespace.js, normalize-whitespace.test.js, README.md 세 파일입니다.
-함수 파일은 CommonJS로 normalizeWhitespace를 내보내고, 테스트는 Node.js 내장 node:test와 node:assert/strict를 사용해 앞뒤 공백, 섞인 공백, 공백만 있는 문자열, 한글과 문장부호 보존을 각각 확인해 주세요. 외부 패키지와 네트워크는 사용하지 마세요.
+함수 파일은 CommonJS로 normalizeWhitespace를 내보내고, 테스트는 Node.js 내장 node:test와 node:assert/strict를 사용해 앞뒤 공백, 섞인 공백, 공백만 있는 문자열, 한글과 문장부호 보존을 각각 확인해 주세요.
+생성할 함수와 테스트는 외부 패키지나 네트워크 요청 없이 Node.js 내장 기능만 사용하세요. 이 제한은 생성 파일의 동작에 적용되며, Codex 실행 환경에서는 모델 통신을 사용할 수 있습니다.
 README에는 함수 예시와 테스트 명령을 적어 주세요. 완료 기준은 세 파일을 내려받을 수 있고 node --test normalize-whitespace.test.js가 통과하는 것입니다.
 ```
 

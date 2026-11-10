@@ -14,4 +14,6 @@ ORDO에 포함된 FFmpeg에는 LGPL 2.1 이상 라이선스가 적용됩니다. 
 
 ZIP을 모두 풀고 `ORDO-Windows-20261110-r111` 앱 폴더 안의 `ORDO.exe`를 엽니다. r111은 Git for Windows `2.54.0.windows.1`과 Codex CLI `0.163.0`을 정확히 요구합니다. Node.js `24.14.1`은 ZIP에 포함되어 있습니다.
 
+이번 프리뷰의 `ORDO.exe`에는 Windows Authenticode 코드 서명이 없습니다.
+
 AI 작업에는 Windows 11의 Microsoft Execution Containers(MXC) 지원, Codex 로그인 및 `gpt-6-astra`와 `gpt-6.1-sol` 모델 접근 권한이 필요합니다. 모델 접근은 로그인한 계정과 워크스페이스에서 확인해야 합니다. [OpenAI Windows 샌드박스 안내](https://learn.chatgpt.com/docs/windows/windows-sandbox#mxc-compatibility)
